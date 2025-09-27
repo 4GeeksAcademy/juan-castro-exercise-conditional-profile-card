@@ -36,20 +36,25 @@ function render(variables = {}) {
           <h1>${variables.name === null ? "" : variables.name} ${
     variables.lastName === null ? "" : variables.lastName
   } </h1>
-          <h2>${variables.role} </h2>
-          <h3>${variables.country} ${variables.city} </h3>
-          <ul class= ${variables.socialMediaPosition}>
+          <h2>${variables.role === null ? "" : variables.role}</h2>
+          <h3>${variables.country === null ? "" : variables.country}
+          ${variables.city === null ? "" : variables.city}</h3>
+          <ul class= ${
+            variables.socialMediaPosition === null
+              ? ""
+              : variables.socialMediaPosition
+          }>
             <li><a href="https://twitter.com/4geeksacademy">${
               variables.twitter
             } <i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy">${
-              variables.github
+              variables.github === null ? "" : variables.github
             }<i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/school/4geeksacademy">${
-              variables.linkedin
+              variables.linkedin === null ? "" : variables.linkedin
             }<i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/4geeksacademy">${
-              variables.instagram
+              variables.instagram === null ? "" : variables.instagram
             }<i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
